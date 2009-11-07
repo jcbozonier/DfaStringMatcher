@@ -2,6 +2,7 @@ require 'state_builder'
 require 'start_state'
 require 'standard_state'
 require 'always_transition'
+require 'match_any_transition'
 require 'string_reader'
 
 describe "When building a state from a string with one period" do
@@ -13,6 +14,10 @@ describe "When building a state from a string with one period" do
 
   it "should return a three state graph" do
     @graph.transitions[0].destination.transitions[0].destination.should_not == nil
+  end
+
+  it "should have a match any transition" do
+    @graph.transitions[0].class.should == MatchAnyTransition
   end
 
   it "should have a start state as the root node" do
