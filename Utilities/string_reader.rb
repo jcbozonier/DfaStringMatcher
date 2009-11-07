@@ -21,6 +21,12 @@ class StringReader
     @string[@current_index, 1]
   end
 
+  def read_each
+    while !end_of_string
+      yield read
+    end
+  end
+
   def end_of_string
     @current_index == @string.length - 1
   end

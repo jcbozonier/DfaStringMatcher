@@ -28,7 +28,7 @@ describe "When building a three pattern with a match any multiple in the middle"
     @graph.transitions[0].destination.transitions[0].destination.class.should == StandardState
   end
 
-  it "should have a terminal state as the 4th state" do
+  it "should have a standard state as the 4th state" do
     @graph.transitions[0].destination.transitions[0].destination.transitions[0].destination.class.should == StandardState
   end
 

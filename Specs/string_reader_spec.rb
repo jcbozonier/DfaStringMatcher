@@ -1,5 +1,19 @@
 require 'string_reader'
 
+describe "When reading each character in string" do
+  before(:each) do
+    @string_reader = StringReader.new("abc")
+    @my_result = ""
+    @string_reader.read_each do |character|
+      @my_result << character
+    end
+  end
+
+  it "should iterate through each character in the correct order" do
+    @my_result.should == "abc"
+  end
+end
+
 describe "When reading past last character in the string" do
   before(:each) do
     @string_reader = StringReader.new("ab")
