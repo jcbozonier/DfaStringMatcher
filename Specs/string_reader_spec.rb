@@ -21,8 +21,8 @@ describe "When reading past last character in the string" do
     @string_reader.read
   end
 
-  it "should return None" do
-    lambda{@string_reader.read}.should raise_error
+  it "should asplode!" do
+    running{@string_reader.read}.should raise_error
   end
 end
 
@@ -100,3 +100,5 @@ describe "When StringReader is initialized and peeked" do
     @peeked_string.should == "a"
   end
 end
+
+alias running lambda
