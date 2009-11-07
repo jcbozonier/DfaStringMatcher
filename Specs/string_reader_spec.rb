@@ -1,4 +1,4 @@
-require 'StringReader'
+require 'string_reader'
 
 describe "When reading past last character in the string" do
   before(:each) do

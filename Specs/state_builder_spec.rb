@@ -1,8 +1,6 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-
 require 'state_builder'
-require 'StringReader'
+require 'start_state'
+require 'string_reader'
 
 describe "When building a state from a string with one character" do
   before(:each) do

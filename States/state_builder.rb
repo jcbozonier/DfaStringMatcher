@@ -1,4 +1,7 @@
-require "StringMatcherSpike"
+require "standard_state"
+require "start_state"
+require "terminal_state"
+require "literal_transition"
 
 class StateBuilder
   def create_from(string_reader)
