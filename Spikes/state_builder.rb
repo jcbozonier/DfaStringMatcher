@@ -13,6 +13,7 @@ class StateBuilder
         # if the current character is not a . or *
         # then we need to create a new standard state
         # we also need to create a standard transition
+
         #if current_character != "." && current_character != "*"
           previous_state = current_state
           current_state = StandardState.new(number_created)
