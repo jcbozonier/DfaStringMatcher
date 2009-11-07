@@ -1,5 +1,5 @@
 require "spec"
-require "../Source/matcher"
+require "matcher"
 
 describe "When matching a multiletter string with a match using a period" do
   before do
