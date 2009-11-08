@@ -108,7 +108,7 @@ class StateBuilder
   end
 
   def _create_terminal_state
-    @number_created += 2
+    @number_created += 1
     result = TerminalState.new(@number_created)
     return result
   end
