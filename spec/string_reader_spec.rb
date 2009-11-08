@@ -1,4 +1,6 @@
-require 'string_reader'
+require 'Source/string_reader'
+
+alias running lambda
 
 describe "When reading each character in string" do
   before(:each) do
@@ -100,5 +102,3 @@ describe "When StringReader is initialized and peeked" do
     @peeked_string.should == "a"
   end
 end
-
-alias running lambda

@@ -1,9 +1,5 @@
-require 'state_builder'
-require 'start_state'
-require 'standard_state'
-require 'always_transition'
-require 'match_any_transition'
-require 'string_reader'
+require 'Source/state_builder'
+require 'Source/string_reader'
 
 describe "When building a three pattern with a match any multiple in the middle" do
   before(:each) do
