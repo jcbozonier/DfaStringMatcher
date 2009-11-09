@@ -208,6 +208,6 @@ class MatchAnyTransition
   end
 
   def can_do(literal)
-    @literal == literal
+    true
   end
 end
