@@ -1,11 +1,9 @@
 require 'Source/state_builder'
-require 'Source/string_reader'
 
 describe "When building a three pattern with a match any multiple in the middle" do
   before(:each) do
     @state_builder = StateBuilder.new
-    @string_reader = StringReader.new("a*.")
-    @graph = @state_builder.create_from(@string_reader)
+    @graph = @state_builder.create_from("a*.")
   end
 
   it "should return a five state graph" do
@@ -36,8 +34,7 @@ end
 describe "When building a state from a string with one *" do
   before(:each) do
     @state_builder = StateBuilder.new
-    @string_reader = StringReader.new("*")
-    @graph = @state_builder.create_from(@string_reader)
+    @graph = @state_builder.create_from("*")
   end
 
   it "should return a two state graph" do
@@ -68,8 +65,7 @@ end
 describe "When building a state from a string with one period" do
   before(:each) do
     @state_builder = StateBuilder.new
-    @string_reader = StringReader.new(".")
-    @graph = @state_builder.create_from(@string_reader)
+    @graph = @state_builder.create_from(".")
   end
 
   it "should return a three state graph" do
@@ -96,8 +92,7 @@ end
 describe "When building a state from a string with one character" do
   before(:each) do
     @state_builder = StateBuilder.new
-    @string_reader = StringReader.new("a")
-    @graph = @state_builder.create_from(@string_reader)
+    @graph = @state_builder.create_from("a")
   end
 
   it "should return a three state graph" do

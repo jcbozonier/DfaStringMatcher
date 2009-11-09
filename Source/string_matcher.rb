@@ -4,7 +4,7 @@ require "state_builder"
 class StringMatcher
   def is_match(pattern, test_string)
     state_builder = StateBuilder.new
-    graph = state_builder.create_from(StringReader.new(pattern))
+    graph = state_builder.create_from(pattern)
 
     reader = StringReader.new(test_string)
     next_states = [graph]
